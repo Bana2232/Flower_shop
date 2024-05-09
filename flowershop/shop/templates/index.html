@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/index_style.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{% static 'index1.jpg' %}" class="d-block mx-lg-auto img-fluid" alt="main1" width="700"
+                 height="500" loading="lazy" style="border-radius: 15px;">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Добро пожаловать в наш уютный цветочный
+                магазин!</h1>
+            <p class="lead">Здесь вы найдете вдохновение и красоту природы, воплощенные в чудесных букетах и
+                композициях. Давайте вместе создадим неповторимый шедевр из цветов для особенного случая или просто
+                чтобы подарить радость. Погрузитесь в мир цветов вместе с нами!</p>
+        </div>
+    </div>
+</div>
+
+<div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom">Почему мы?</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+
+        <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+                 style="border-radius: 10px; padding: 5px;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"
+                     fill="rgba(255,255,255,1)">
+                    <path d="M3.16113 4.46875C5.58508 2.0448 9.44716 1.9355 12.0008 4.14085C14.5528 1.9355 18.4149 2.0448 20.8388 4.46875C23.2584 6.88836 23.3716 10.741 21.1785 13.2947L13.4142 21.0858C12.6686 21.8313 11.4809 21.8652 10.6952 21.1874L10.5858 21.0858L2.82141 13.2947C0.628282 10.741 0.741522 6.88836 3.16113 4.46875ZM4.57534 5.88296C2.86819 7.59011 2.81942 10.3276 4.42902 12.0937L4.57534 12.2469L12 19.6715L17.3026 14.3675L13.7677 10.8327L12.7071 11.8934C11.5355 13.0649 9.636 13.0649 8.46443 11.8934C7.29286 10.7218 7.29286 8.8223 8.46443 7.65073L10.5656 5.54823C8.85292 4.17713 6.37076 4.23993 4.7286 5.73663L4.57534 5.88296ZM13.0606 8.71139C13.4511 8.32086 14.0843 8.32086 14.4748 8.71139L18.7168 12.9533L19.4246 12.2469C21.1819 10.4896 21.1819 7.64032 19.4246 5.88296C17.7174 4.17581 14.9799 4.12704 13.2139 5.73663L13.0606 5.88296L9.87864 9.06494C9.51601 9.42757 9.49011 9.99942 9.80094 10.3919L9.87864 10.4792C10.2413 10.8418 10.8131 10.8677 11.2056 10.5569L11.2929 10.4792L13.0606 8.71139Z"></path>
+                </svg>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Качество и уникальность букетов</h3>
+            <p>Мы предлагаем широкий выбор букетов, от классических роз до авторских композиций с уникальными
+                сочетаниями цветов и зелени.</p>
+        </div>
+
+        <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+                 style="border-radius: 10px; padding: 5px;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"
+                     fill="rgba(255,255,255,1)">
+                    <path d="M8.96456 18C8.72194 19.6961 7.26324 21 5.5 21C3.73676 21 2.27806 19.6961 2.03544 18H1V6C1 5.44772 1.44772 5 2 5H16C16.5523 5 17 5.44772 17 6V8H20L23 12.0557V18H20.9646C20.7219 19.6961 19.2632 21 17.5 21C15.7368 21 14.2781 19.6961 14.0354 18H8.96456ZM15 7H3V15.0505C3.63526 14.4022 4.52066 14 5.5 14C6.8962 14 8.10145 14.8175 8.66318 16H14.3368C14.5045 15.647 14.7296 15.3264 15 15.0505V7ZM17 13H21V12.715L18.9917 10H17V13ZM17.5 19C18.1531 19 18.7087 18.5826 18.9146 18C18.9699 17.8436 19 17.6753 19 17.5C19 16.6716 18.3284 16 17.5 16C16.6716 16 16 16.6716 16 17.5C16 17.6753 16.0301 17.8436 16.0854 18C16.2913 18.5826 16.8469 19 17.5 19ZM7 17.5C7 16.6716 6.32843 16 5.5 16C4.67157 16 4 16.6716 4 17.5C4 17.6753 4.03008 17.8436 4.08535 18C4.29127 18.5826 4.84689 19 5.5 19C6.15311 19 6.70873 18.5826 6.91465 18C6.96992 17.8436 7 17.6753 7 17.5Z"></path>
+                </svg>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Удобство заказа и доставки</h3>
+            <p>Мы гарантируем своевременную доставку цветов по указанному адресу, чтобы подарок пришел вовремя и
+                порадовал получателя.</p>
+        </div>
+
+        <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+                 style="border-radius: 10px; padding: 5px;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"
+                     fill="rgba(255,255,255,1)">
+                    <path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H18C18 18.6863 15.3137 16 12 16C8.68629 16 6 18.6863 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"></path>
+                </svg>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Персонализированный сервис</h3>
+            <p>Наша команда готова помочь вам выбрать идеальный букет,
+                подходящий под ваше событие или предпочтения.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container col-xl-10 col-xxl-8 px-4 py-5" style="border-top: 1px solid #ddd">
+    <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Для какого мероприятия будет букет?</h1>
+            <p class="col-lg-10 fs-4">Выберите мероприятие, и мы подберём подходящий букет цветов!</p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+            <form method="post" action="{% url 'shop:index' %}#flower_sel">
+                {% csrf_token %}
+                <div style="display: flex;">
+                    <select class="form-select">
+                        {% for category in categories %}
+                        {% if category.category == "Все" %}
+                        <option value="{{ category.id }}" selected>
+                            {{ category.category }}
+                        </option>
+
+                        {% else %}
+                        <option value="{{ category.id }}">
+                            {{ category.category }}
+                        </option>
+                        {% endif %}
+                        {% endfor %}
+                    </select>
+                    <input type="submit" value="Подобрать" class="btn btn-outline-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<h1 style="margin-left: 2%; margin-right: 2% ;border-bottom: 1px solid #ddd">Выберите свой букет</h1>
+
+<div class="cont" style="display: flex; margin-left: 2%; margin-right: 2%;" id="flower_sel">
+
+    <div class="items-list">
+        <div class="cards">
+            {% for item in items %}
+            <div class="card">
+
+                <div class="images">
+                    <div class="slider">
+                        <a href="{% url 'shop:item_detail' item.id %}">
+                            <div class="slides">
+                                {% for photo in item.images.all %}
+                                <div class="slide" style='background-image: url({{ photo.image.url }});'></div>
+                                {% endfor %}
+                            </div>
+                        </a>
+                        <button class="prev" onclick="changeSlide(-1, {{ item.id }} - 1)">&#10094;</button>
+                        <button class="next" onclick="changeSlide(1, {{ item.id }} - 1)">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <a class="card-title" href="{% url 'shop:item_detail' item.id %}">{{ item.title }}</a>
+                    <p class="card-price">{{ item.price }} ₽</p>
+                    <a href="{% url 'shop:cart_add' item.id %}" class="btn btn-primary">В корзину</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% include "pagination.html" with page=pages %}
+    </div>
+
+</div>
+
+<script src="{% static 'js/script1.js' %}"></script>
+{% endblock %}
