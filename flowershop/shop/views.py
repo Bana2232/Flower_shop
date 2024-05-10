@@ -9,8 +9,9 @@ from .forms import CommentForm
 def index_page(request):
     categories = Category.objects.all()
     filt = request.POST.get("MySelect", 9)
+    filt = int(filt)
 
-    if int(filt) != 9:
+    if filt != 9:
         items_list = Item.objects.filter(category__id=filt)
 
     else:
@@ -18,7 +19,7 @@ def index_page(request):
 
     slides = CarouselItems.objects.all()
 
-    paginator = Paginator(items_list, 6)
+    paginator = Paginator(items_list, 8)
     page_number = request.GET.get("page", 1)
 
     try:
@@ -33,7 +34,7 @@ def index_page(request):
     return render(request, "index.html",
                   {"items": items, "paginator": paginator,
                    "slides": slides, "categories": categories,
-                   "filt": int(filt)})
+                   "filt": filt})
 
 
 def about(request):

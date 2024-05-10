@@ -39,7 +39,9 @@
 
         <div class="price_box">
             <h2>{{ item.price }} ₽</h2>
-            <a href="{% url 'shop:cart_add' item.id %}"><input class="add_to_cart_btn" value="В корзину" type="button"></a>
+            <a href="{% url 'shop:cart_add' item.id %}">
+                <input class="btn btn-outline-primary" value="В корзину" type="button"
+                       style="width: 120px; height: 50px;"></a>
         </div>
 
     </div>
@@ -50,8 +52,9 @@
     </div>
 
     <h2 style="margin-top: 3%; border-bottom: 1px solid #ccc; padding-bottom: 1%;">Отзывы о товаре</h2>
-    <a href="{% url 'shop:add_comment' item.id %}"><input class="add_comment_btn" value="Написать отзыв"
-                                                          type="button"></a>
+    <a href="{% url 'shop:add_comment' item.id %}">
+        <input class="btn btn-outline-primary" value="Написать отзыв" type="button"
+               style="width: auto; height: 50px; margin-bottom: 20px;"></a>
 
     {% if comments|length == 0 %}
     <h3 align="center" style="color: #ddd">Отзывов нет</h3>

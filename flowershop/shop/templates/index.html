@@ -127,7 +127,7 @@
                 <div class="card-body">
                     <a class="card-title" href="{% url 'shop:item_detail' item.id %}">{{ item.title }}</a>
                     <p class="card-price">{{ item.price }} ₽</p>
-                    <a href="{% url 'shop:cart_add' item.id %}" class="btn btn-primary">В корзину</a>
+                    <a href="{% url 'shop:cart_add' item.id %}" class="btn btn-outline-primary">В корзину</a>
                 </div>
             </div>
             {% endfor %}

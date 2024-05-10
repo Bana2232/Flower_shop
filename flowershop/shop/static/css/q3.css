@@ -104,22 +104,6 @@ button {
     justify-content: space-between;
 }
 
-.add_to_cart_btn {
-    font-weight: bold;
-    color: #fff;
-    background-color: rgba(0, 91, 255, 1);
-    border-radius: 10px;
-    border: none;
-    width: 120px;
-    height: 50px;
-}
-
-
-.add_to_cart_btn:hover {
-    background-color: rgba(0, 91, 255, 0.8);
-}
-
-
 .comment {
     border-radius: 10px;
     padding: 10px;
@@ -150,22 +134,6 @@ button {
     font-weight: normal;
 }
 
-.add_comment_btn {
-    font-weight: bold;
-    color: #fff;
-    background-color: rgba(0, 91, 255, 1);
-    border-radius: 10px;
-    border: none;
-    width: auto;
-    height: 50px;
-    padding: 15px;
-    margin-bottom: 20px;
-}
-
-
-.add_comment_btn:hover {
-    background-color: rgba(0, 91, 255, 0.8);
-}
 .comment_box {
     border-radius: 10px;
     border-bottom: 1px solid #ddd;
