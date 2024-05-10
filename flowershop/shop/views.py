@@ -8,10 +8,10 @@ from .forms import CommentForm
 
 def index_page(request):
     categories = Category.objects.all()
-    filt = request.GET.get("filt", None)
+    filt = request.POST.get("MySelect", 9)
 
-    if filt:
-        items_list = Item.objects.filter(category_id=filt)
+    if int(filt) != 9:
+        items_list = Item.objects.filter(category__id=filt)
 
     else:
         items_list = Item.objects.all()
@@ -32,7 +32,8 @@ def index_page(request):
 
     return render(request, "index.html",
                   {"items": items, "paginator": paginator,
-                   "slides": slides, "categories": categories})
+                   "slides": slides, "categories": categories,
+                   "filt": int(filt)})
 
 
 def about(request):

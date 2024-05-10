@@ -79,9 +79,9 @@
             <form method="post" action="{% url 'shop:index' %}#flower_sel">
                 {% csrf_token %}
                 <div style="display: flex;">
-                    <select class="form-select">
+                    <select class="form-select" name="MySelect">
                         {% for category in categories %}
-                        {% if category.category == "Все" %}
+                        {% if category.id == filt %}
                         <option value="{{ category.id }}" selected>
                             {{ category.category }}
                         </option>
@@ -93,18 +93,19 @@
                         {% endif %}
                         {% endfor %}
                     </select>
-                    <input type="submit" value="Подобрать" class="btn btn-outline-primary">
+                    <input type="submit" value="Подобрать"
+                           class="btn btn-outline-primary" style="margin-left: 5px;">
                 </div>
             </form>
         </div>
     </div>
 </div>
 
-<h1 style="margin-left: 2%; margin-right: 2% ;border-bottom: 1px solid #ddd">Выберите свой букет</h1>
+<h1 style="margin-left: 2%; margin-right: 2% ;border-bottom: 1px solid #ddd"
+    id="flower_sel">Выберите свой букет</h1>
 
-<div class="cont" style="display: flex; margin-left: 2%; margin-right: 2%;" id="flower_sel">
-
-    <div class="items-list">
+<div class="cont" style="display: flex; margin-left: 2%; margin-right: 2%; justify-content: center;">
+    <div class="items-list" style="width: 100%;">
         <div class="cards">
             {% for item in items %}
             <div class="card">
@@ -130,8 +131,14 @@
                 </div>
             </div>
             {% endfor %}
+
         </div>
-    {% include "pagination.html" with page=pages %}
+        {% if items|length != 0 %}
+
+        {% include "pagination.html" with page=pages %}
+        {% else %}
+        <p align="center" style="color: #ddd; font-size: 27px">Ничего не найдено. Скоро мы это исправим</p>
+        {% endif %}
     </div>
 
 </div>
